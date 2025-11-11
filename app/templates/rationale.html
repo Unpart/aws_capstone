@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>실용적 근거</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Malgun Gothic,sans-serif;margin:0;background:#fafafa}
+    header,footer{padding:16px;background:#111;color:#fff}
+    main{padding:20px;max-width:960px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+    nav a{color:#fff;margin-right:12px;text-decoration:none}
+    .card{border:1px solid #eee;border-radius:12px;padding:16px;margin:12px 0}
+    .muted{color:#666}
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/main">Main</a>
+    <a href="/subject">Subject</a>
+    <a href="/rationale">Rationale</a>
+    <a href="/features">Features</a>
+    <a href="/environment">Environment</a>
+    <a href="/team">Team</a>
+  </nav>
+</header>
+<main>
+  <h1>실용적 근거</h1>
+  <div class="card">
+    <p><strong>문제 인식:</strong> {{ data.get('problem', '') }}</p>
+    <p><strong>필요성:</strong> {{ data.get('needs', '') }}</p>
+    <p><strong>실용적 가치:</strong> {{ data.get('value', '') }}</p>
+  </div>
+  <p class="muted"><a href="/api/rationale">/api/rationale</a></p>
+</main>
+<footer>© 캡스톤 프로젝트</footer>
+</body>
+</html>

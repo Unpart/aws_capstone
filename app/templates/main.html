@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>캡스톤 프로젝트 소개</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Malgun Gothic,sans-serif;margin:0;background:#fafafa}
+    header,footer{padding:16px;background:#111;color:#fff}
+    main{padding:20px;max-width:960px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+    nav a{color:#fff;margin-right:12px;text-decoration:none}
+    h1,h2,h3{color:#222}
+    code,pre{background:#f6f8fa;padding:2px 4px;border-radius:4px;font-family:monospace}
+    ul{margin:0;padding-left:18px}
+    li{margin-bottom:4px}
+    .card{border:1px solid #eee;border-radius:12px;padding:16px;margin:12px 0}
+    hr{margin:32px 0;border:none;border-top:1px solid #ddd}
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/main">Main</a>
+    <a href="/subject">Subject</a>
+    <a href="/rationale">Rationale</a>
+    <a href="/features">Features</a>
+    <a href="/environment">Environment</a>
+    <a href="/team">Team</a>
+  </nav>
+</header>
+<main>
+  <h1>AWS 프로젝트 적용 - 캡스톤 디자인 소개 웹페이지</h1>
+  <p>이 웹 애플리케이션은 실제 캡스톤 디자인 프로젝트를 주제로, AWS EC2/Docker Compose를 활용하여 배포 가능한 Flask 기반 단일 웹앱 형태로 제작되었습니다.</p>
+
+  <hr/>
+
+  <h2>📘 프로젝트 개요</h2>
+  <ul>
+    <li><strong>프로젝트명:</strong> 네컷모아(Nemo)</li>
+    <li><strong>유형:</strong> 캡스톤 디자인 (6개월 과정)</li>
+    <li><strong>목표:</strong> 사진 업로드, 자동 분류, 캘린더/타임라인, 공유형 앨범 기능</li>
+    <li><strong>기반 기술:</strong> Flask · Docker · AWS EC2 · GitHub</li>
+  </ul>
+
+  <hr/>
+
+  <h2>🧩 페이지 구성</h2>
+  <p>총 6개의 페이지로 구성되어 있으며, 각 페이지는 API로도 접근 가능합니다.</p>
+  <table border="1" cellspacing="0" cellpadding="8">
+    <tr><th>경로</th><th>내용</th><th>API</th></tr>
+    <tr><td>/main</td><td>메인 페이지 (README 내용 표시)</td><td>/api/main</td></tr>
+    <tr><td>/subject</td><td>작품 주제 및 목표</td><td>/api/subject</td></tr>
+    <tr><td>/rationale</td><td>실용적 근거 및 가치</td><td>/api/rationale</td></tr>
+    <tr><td>/features</td><td>핵심 기능</td><td>/api/features</td></tr>
+    <tr><td>/environment</td><td>개발·배포 환경</td><td>/api/environment</td></tr>
+    <tr><td>/team</td><td>팀 구성 및 역할</td><td>/api/team</td></tr>
+  </table>
+
+  <hr/>
+
+  <h2>⚙️ 실행 방법</h2>
+  <pre><code># 로컬 실행
+docker compose up -d --build
+
+# 브라우저 접속
+http://localhost/main
+
+# EC2 접속 (예시)
+http://[EC2_IP]/main
+</code></pre>
+
+  <hr/>
+
+  <h2>📦 프로젝트 구조</h2>
+  <pre><code>aws-capstone-site/
+├─ app/
+│  ├─ server.py
+│  ├─ pages.py
+│  ├─ data/content.json
+│  └─ templates/
+│     ├─ main.html
+│     ├─ subject.html
+│     ├─ ...
+├─ Dockerfile
+├─ docker-compose.yml
+├─ requirements.txt
+└─ README.md
+</code></pre>
+
+  <hr/>
+
+  <h2>🧠 주요 기술 스택</h2>
+  <ul>
+    <li><strong>Language:</strong> Python 3.11</li>
+    <li><strong>Framework:</strong> Flask + Jinja2</li>
+    <li><strong>Server:</strong> Gunicorn</li>
+    <li><strong>Deployment:</strong> AWS EC2 / Docker Compose</li>
+    <li><strong>Version Control:</strong> GitHub</li>
+  </ul>
+
+  <hr/>
+
+  <h2>👥 팀 구성</h2>
+  <ul>
+    <li>김한욱 – 팀장, 아키텍처 설계</li>
+    <li>문한일 – 백엔드 개발</li>
+    <li>임다빈 – 프론트엔드(UI) 개발</li>
+  </ul>
+
+  <hr/>
+
+  <h2>📖 라이선스 및 제출</h2>
+  <ul>
+    <li>프로젝트 및 Dockerfile, Compose, README는 GitHub에 업로드 후 제출</li>
+    <li>EC2에서 실행 및 외부 접근 확인 후 캡처 제출</li>
+    <li>레포지토리 링크 예: <code>https://github.com/username/aws-capstone-site</code></li>
+  </ul>
+
+</main>
+<footer>© 캡스톤 프로젝트</footer>
+</body>
+</html>

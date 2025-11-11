@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    ports:
+      - "80:8000"          # 호스트 80 → 컨테이너 8000
+    volumes:
+      - ./app/data:/app/app/data:ro   # 내용 교체시 핫리로드는 아님(서버 재시작 필요)
+    restart: unless-stopped
